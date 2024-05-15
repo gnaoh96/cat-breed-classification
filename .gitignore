@@ -1,0 +1,12 @@
+*.env
+data/annotations
+data/images
+notebook/.ipynb_checkpoins/
+model/resnet50-model.pth
+model/simpleCNN-model.pth
+__pycache__/
+./app/__pycache__
+**/.terraform/*
+ansible/imgs/*
+ansible/secrets/*
+ansible/simple_playbook
