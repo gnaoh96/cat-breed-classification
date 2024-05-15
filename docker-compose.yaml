@@ -1,0 +1,33 @@
+# Compose file file format
+# Pay attention to https://bom.so/kVr7Qn
+version: '3.8'
+
+services:
+  cat_breed_prediction:
+    # The name will be displayed
+    # in docker ps
+    container_name: cat_breed_prediction
+    # Build the image from Dockerfile
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # Expose port 30000
+    ports:
+      - '30000:30000'
+    # network_mode: "host"        
+    # And set the image name
+    image: gnaoh96/cat-breed-prediction:0.0.1                    
+    # Heath check
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:30000/docs"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 10s
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
