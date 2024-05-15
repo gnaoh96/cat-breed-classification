@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}
+  labels:
+    app: {{ .Release.Name }}
+  namespace: jaeger-tracing
+spec:
+  selector:
+    app: {{ .Release.Name }}
+  ports:
+    - port: 16686
+      protocol: TCP
+      targetPort: 16686
+  type: NodePort
