@@ -16,10 +16,6 @@ from utils.predict_utils import define_device, load_model, transform_img
 
 os.environ["CUDA_LAUNCH_BLOCKING"] = "0"
 
-# Save all files and result to cached
-# by a dictionary with key is image hash
-# cache = {}
-
 # Create a tracer provider and set the exporter
 set_tracer_provider(
     TracerProvider(resource=Resource.create({SERVICE_NAME: "cbp-service"}))
