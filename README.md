@@ -119,10 +119,10 @@ helm upgrade --install jaeger-tracing helm-charts/jaeger-tracing -n jaeger-traci
 ```bash
 sudo vim /ect/hosts
 
-your_nginx-ingress_host jaeger.com
+your_nginx-ingress_host cbp.jaeger.com
 ```
 
-#### 3.3 Access Jaeger UI - http://jaeger.com/ & start tracing
+#### 3.3 Access Jaeger UI - http://cbp.jaeger.com/ & start tracing
 ![image](https://github.com/gnaoh96/cat-breed-classification/blob/main/readme_images/Screenshot%20from%202024-05-14%2021-53-32.png)
 
 
