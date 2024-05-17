@@ -8,7 +8,7 @@ metadata:
     kubernetes.io/ingress.class: "nginx" # which can be replaced by gce, gce-internal or istio
 spec:
   rules:
-  - host: jaeger.com  # You can also use "34.123.248.115.nip.io", please refer to https://github.com/GoogleCloudPlatform/community/blob/master/archived/nginx-ingress-gke/index.md
+  - host: cbp.jaeger.com  # You can also use nip solution, please refer to https://github.com/GoogleCloudPlatform/community/blob/master/archived/nginx-ingress-gke/index.md
     http:
       paths:
       - path: /
