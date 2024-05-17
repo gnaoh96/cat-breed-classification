@@ -1,5 +1,4 @@
 # Compose file file format
-# Pay attention to https://bom.so/kVr7Qn
 version: '3.8'
 
 services:
