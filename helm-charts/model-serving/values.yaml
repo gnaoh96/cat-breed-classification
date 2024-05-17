@@ -1,0 +1,11 @@
+image:
+  repository: gnaoh96/cat-breed-prediction
+  tag: "0.0.1"
+  pullPolicy: Always
+
+
+env:
+  - name: JAEGER_HOST
+    value: jaeger-tracing.jaeger-tracing.svc.cluster.local
+  - name: JAEGER_PORT
+    value: 16686

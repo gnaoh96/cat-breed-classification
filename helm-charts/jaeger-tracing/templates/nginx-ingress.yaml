@@ -1,0 +1,41 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Release.Name }}-nginx-ingress
+  namespace: jaeger-tracing
+  # https://cloud.google.com/kubernetes-engine/docs/concepts/ingress#controller_summary
+  annotations:
+    kubernetes.io/ingress.class: "nginx" # which can be replaced by gce, gce-internal or istio
+spec:
+  rules:
+  - host: jaeger.com  # You can also use "34.123.248.115.nip.io", please refer to https://github.com/GoogleCloudPlatform/community/blob/master/archived/nginx-ingress-gke/index.md
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ .Release.Name }}
+            port:
+              number: 16686
+      - path: /api/services
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ .Release.Name }}
+            port:
+              number: 16686
+      - path: /api/services/jaeger-query/operations
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ .Release.Name }}
+            port:
+              number: 16686
+      - path: /api/traces?
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ .Release.Name }}
+            port:
+              number: 16686
