@@ -6,7 +6,7 @@ metadata:
     app: {{ .Release.Name }}
   namespace: jaeger-tracing
 spec:
-  replicas: 1 # 3 replicas
+  replicas: 1 # Deploy only 1 rep
   selector:
     matchLabels:
       app: {{ .Release.Name }}
