@@ -11,6 +11,8 @@ COPY ./app/utils/predict_utils.py /app/utils/
 
 COPY ./requirements.txt /app
 
+RUN pip install -r requirements.txt --no-cache-dir # Run command install on this line to avoid re-install requirements.txt when model & data has changed
+
 COPY ./model/resnet50-model-augmentation.pth /app/model/
 
 COPY ./data/test /app/data/test
@@ -22,6 +24,6 @@ EXPOSE 30000
 
 # Disable pip cache to shrink the image size a little bit,
 # since it does not need to be re-installed
-RUN pip install -r requirements.txt --no-cache-dir
+# RUN pip install -r requirements.txt --no-cache-dir
 
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "30000"]
