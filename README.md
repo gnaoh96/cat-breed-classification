@@ -4,7 +4,7 @@
 
 ## **Table of Contents**
 + [API Example](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#api-example)
-+ [How-to Guide] (https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#how-to-guide)
++ [How-to Guide](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#how-to-guide)
   + [I. Running model locally](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#1-running-model-locally)
     + [1.1 Creating & activating conda environment with python 3.9](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#11-creating--activating-conda-environment-with-python-39)
     + [1.2 Install prerequisites](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#12-install-prerequisites)
