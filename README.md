@@ -1,6 +1,6 @@
 # **Cat Breed Classification Model** 
 ## **Overall System Architect**
-![System Architect](https://github.com/gnaoh96/cat-breed-classification/blob/main/readme_images/New_System_Architect.drawio.png)
+![System Architect](https://github.com/gnaoh96/cat-breed-classification/blob/main/readme_images/m1_latest_architect.png)
 
 ## **Demo API**
 Cat Image to classify:
