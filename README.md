@@ -2,7 +2,39 @@
 ## **Overall System Architect**
 ![System Architect](https://github.com/gnaoh96/cat-breed-classification/blob/main/readme_images/m1_latest_architect.png)
 
-## **Demo API**
+## **Table of Contents**
++ API Example
++ How-to Guide
+  + 1. Running model locally
+    + 1.1 Creating & activating conda environment with python 3.9
+    + 1.2 Install prerequisites
+    + 1.3 Navigate to app directory
+    + 1.4 Connect service app with Uvicorn
+    + 1.5 Another way to deploy model locally with Docker Compose
+  + 2. Model-serving with Google Kubernetes Engine (GKE)
+    + Install GCloud Packages
+    + 2.1 Create GKE cluster with Terraform (infrastruture as code)
+    + 2.2 Connect to GKE cluster with GCloud command
+    + 2.3 Switch to your GKE cluster environment (using kubectl)
+    + 2.4 Create cluster namespace
+    + 2.5 Deploy Nginx Ingress Controller with Helm-chart
+    + 2.6 Deploy Cat Breed Classification Application
+    + 2.7 Config Domain Name to nginx-ingress's External IP
+    + 2.8 Access application at address http://cbp.com/docs
+  + 3. Tracing with Jaeger & Opentelemetry
+    + 3.1 Create Jaeger's namespace & deploy Jaeger application
+    + 3.2 Add Jaeger's domain name to nginx's External IP
+    + 3.3 Access Jaeger UI - http://cbp.jaeger.com/ & start tracing
+  + 4. Monitoring with Prometheus & Grafana (kube-prometheus-stack)
+    + 4.1 Create monitoring namespace & deploy kube-prometheus-stack
+    + 4.2 Update monitoring domain name to nginx's External IP
+    + 4.3 Access Grafana UI & enjoy monitoring dashboards - http://cbp.monitoring.com/grafana
+  + 5. CI/CD with Jenkins & Google Compute Engine (GCE)
+    + 5.1 Create GCE & authentication set-up
+    + 5.2 Install & Set-up Jenkins on GCE
+    + 5.3 Starting to Build & Deploy automation with Jenkins
+
+## **API Example**
 Cat Image to classify:
 ##
 <img src="https://github.com/gnaoh96/cat-breed-classification/blob/main/readme_images/cat_0.jpg" width="440" height="337">
@@ -45,7 +77,7 @@ docker compose -f docker-compose.yaml up -d
 ```
 ---
 ### 2. Model-serving with Google Kubernetes Engine (GKE)
-#### 2.1 Install Gcloud Packages
+#### Install GCloud Packages
 + [Install Gcloud CLI](https://cloud.google.com/sdk/docs/install#deb)
 + Install gke-gcloud-auth-plugin:
 ```bash
@@ -60,8 +92,6 @@ sudo apt-get install google-cloud-cli-gke-gcloud-auth-plugin
   ```bash
     gcloud auth application-default login
     ```
-
-### 2 Deploy model with GKE
 #### 2.1 Create GKE cluster with Terraform (infrastruture as code)
 ```bash
 cd terraform # Navigate to terraform folder
@@ -107,7 +137,7 @@ your_nginx-ingress_host cbp.com # Updated content
 #### 2.8 Access application at above address http://cbp.com/docs
 ![image](https://github.com/gnaoh96/cat-breed-classification/blob/main/readme_images/Screenshot%20from%202024-05-14%2021-52-24.png)
 
-### 3. Tracing with Jaeger & Opentelemtry
+### 3. Tracing with Jaeger & Opentelemetry
 #### 3.1 Create Jaeger's namespace & deploy Jaeger application
 ```bash
 kubectl create ns jaeger-tracing
