@@ -3,7 +3,7 @@
 ![System Architect](https://github.com/gnaoh96/cat-breed-classification/blob/main/readme_images/m1_latest_architect.png)
 
 ## **Table of Contents**
-+ [API Example](#API Example)
++ [API Example](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#api-example)
 + How-to Guide
   + I. Running model locally
     + 1.1 Creating & activating conda environment with python 3.9
