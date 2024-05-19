@@ -1,6 +1,6 @@
 # **Cat Breed Classification Model** 
 ## **Overall System Architect**
-![System Architect](https://github.com/gnaoh96/cat-breed-classification/blob/main/readme_images/m1_latest_architect.png)
+![System Architect](https://github.com/gnaoh96/cat-breed-classification/blob/main/readme_images/m1_arch.png)
 
 ## **Table of Contents**
 + [API Example](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#api-example)
