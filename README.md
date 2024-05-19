@@ -4,35 +4,35 @@
 
 ## **Table of Contents**
 + [API Example](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#api-example)
-+ How-to Guide
-  + I. Running model locally
-    + 1.1 Creating & activating conda environment with python 3.9
-    + 1.2 Install prerequisites
-    + 1.3 Navigate to app directory
-    + 1.4 Connect service app with Uvicorn
-    + 1.5 Another way to deploy model locally with Docker Compose
-  + II. Model-serving with Google Kubernetes Engine (GKE)
-    + Install GCloud Packages
-    + 2.1 Create GKE cluster with Terraform (infrastruture as code)
-    + 2.2 Connect to GKE cluster with GCloud command
-    + 2.3 Switch to your GKE cluster environment (using kubectl)
-    + 2.4 Create cluster namespace
-    + 2.5 Deploy Nginx Ingress Controller with Helm-chart
-    + 2.6 Deploy Cat Breed Classification Application
-    + 2.7 Config Domain Name to nginx-ingress's External IP
-    + 2.8 Access application at address http://cbp.com/docs
-  + III. Tracing with Jaeger & Opentelemetry
-    + 3.1 Create Jaeger's namespace & deploy Jaeger application
-    + 3.2 Add Jaeger's domain name to nginx's External IP
-    + 3.3 Access Jaeger UI - http://cbp.jaeger.com/ & start tracing
-  + IV. Monitoring with Prometheus & Grafana (kube-prometheus-stack)
-    + 4.1 Create monitoring namespace & deploy kube-prometheus-stack
-    + 4.2 Update monitoring domain name to nginx's External IP
-    + 4.3 Access Grafana UI & enjoy monitoring dashboards - http://cbp.monitoring.com/grafana
-  + V. CI/CD with Jenkins & Google Compute Engine (GCE)
-    + 5.1 Create GCE & authentication set-up
-    + 5.2 Install & Set-up Jenkins on GCE
-    + 5.3 Starting to Build & Deploy automation with Jenkins
++ [How-to Guide] (https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#how-to-guide)
+  + [I. Running model locally](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#1-running-model-locally)
+    + [1.1 Creating & activating conda environment with python 3.9](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#11-creating--activating-conda-environment-with-python-39)
+    + [1.2 Install prerequisites](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#12-install-prerequisites)
+    + [1.3 Navigate to app directory](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#13-navigate-to-app-directory)
+    + [1.4 Connect service app with Uvicorn](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#14-connect-service-app-with-uvicorn)
+    + [1.5 Another way to deploy model locally with Docker Compose](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#15-another-way-to-deploy-model-locally-with-docker-compose)
+  + [II. Model-serving with Google Kubernetes Engine (GKE)](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#2-model-serving-with-google-kubernetes-engine-gke)
+    + [Install GCloud Packages](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#install-gcloud-packages)
+    + [2.1 Create GKE cluster with Terraform (infrastruture as code)](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#21-create-gke-cluster-with-terraform-infrastruture-as-code)
+    + [2.2 Connect to GKE cluster with GCloud command](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#22-connect-to-gke-cluster-with-gcloud-command)
+    + [2.3 Switch to your GKE cluster environment (using kubectl)](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#23-switch-to-your-gke-cluster-environment-using-kubectl)
+    + [2.4 Create cluster namespace](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#24-create-cluster-namespace)
+    + [2.5 Deploy Nginx Ingress Controller with Helm-chart](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#25-deploy-nginx-ingress-controller-with-helm-chart)
+    + [2.6 Deploy Cat Breed Classification Application](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#26-deploy-cat-breed-classification-application)
+    + [2.7 Config Domain Name to nginx-ingress's External IP](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#27-config-domain-name-to-nginx-ingresss-external-ip)
+    + [2.8 Access Application UI](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#28-access-application-at-above-address-httpcbpcomdocs)
+  + [III. Tracing with Jaeger & Opentelemetry](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#3-tracing-with-jaeger--opentelemetry)
+    + [3.1 Create Jaeger's namespace & deploy Jaeger application](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#31-create-jaegers-namespace--deploy-jaeger-application)
+    + [3.2 Add Jaeger's domain name to nginx's External IP](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#32-add-jaegers-domain-name-to-nginxs-external-ip)
+    + [3.3 Access Jaeger UI](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#33-access-jaeger-ui---httpcbpjaegercom--start-tracing)
+  + [IV. Monitoring with Prometheus & Grafana (kube-prometheus-stack)](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#4-monitoring-with-prometheus--grafana-kube-prometheus-stack)
+    + [4.1 Create monitoring namespace & deploy kube-prometheus-stack](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#41-create-monitoring-namespace--deploy-kube-prometheus-stack)
+    + [4.2 Update monitoring domain name to nginx's External IP](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#42-update-monitoring-domain-name-to-nginxs-external-ip)
+    + [4.3 Access Grafana UI](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#43-access-grafana-ui--enjoy-monitoring-dashboards---httpcbpmonitoringcomgrafana)
+  + [V. CI/CD with Jenkins & Google Compute Engine (GCE)](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#5-cicd-with-jenkins--google-compute-engine-gce)
+    + [5.1 Create GCE & authentication set-up](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#51-create-gce--authentication-set-up)
+    + [5.2 Install & Set-up Jenkins on GCE](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#52-install--set-up-jenkins-on-gce)
+    + [5.3 Starting to Build & Deploy automation with Jenkins](https://github.com/gnaoh96/cat-breed-classification?tab=readme-ov-file#53-starting-to-build--deploy-automation-with-jenkins)
 
 ## **API Example**
 Cat Image to classify:
